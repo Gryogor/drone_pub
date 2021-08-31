@@ -10,6 +10,7 @@ project(drone_vel_pub)
 find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
   rospy
+  tf
 )
 
 ## System dependencies are found with CMake's conventions
@@ -204,6 +205,6 @@ include_directories(
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 
-catkin_install_python(PROGRAMS scripts/vel_pub.py
+catkin_install_python(PROGRAMS scripts/vel_pub.py scripts/urdf_move.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )

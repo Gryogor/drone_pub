@@ -19,7 +19,7 @@ vya = [0.0, 0.0]
 
 pub_rate = 10 #publish rate for velocities Hz
 
-pub = rospy.Publisher('cmd_vel', Twist, queue_size = 1) #if all massages should be send, increase queue size to size of the list. If topic is different, change cmd_vel to this other topic
+pub = rospy.Publisher('cmd_vel', Twist, queue_size = 1) #if all massages should be send, increase queue size to size of the list
 rospy.init_node('vel_pub', anonymous=True)
 rate = rospy.Rate(pub_rate)
 
